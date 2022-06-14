@@ -34,7 +34,8 @@ import {
 	Tag,
 	Tree,
 	Select,
-	Option
+	Option,
+	Cascader
 } from 'element-ui'
 Vue.use(Form)
 Vue.use(FormItem)
@@ -62,6 +63,7 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
@@ -74,6 +76,9 @@ axios.interceptors.request.use(config => {
 })
 Vue.prototype.$http = axios;
 
+
+import TreeTable from 'vue-table-with-tree-grid'
+Vue.component("tree-table", TreeTable)
 
 Vue.config.productionTip = false
 
