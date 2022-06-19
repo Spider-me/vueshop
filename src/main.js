@@ -38,7 +38,12 @@ import {
 	Cascader,
 	Alert,
 	Tabs,
-	TabPane
+	TabPane,
+	Steps,
+	Step,
+	Checkbox,
+	CheckboxGroup,
+	Upload
 } from 'element-ui'
 Vue.use(Form)
 Vue.use(FormItem)
@@ -70,6 +75,11 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
@@ -85,6 +95,14 @@ Vue.prototype.$http = axios;
 
 import TreeTable from 'vue-table-with-tree-grid'
 Vue.component("tree-table", TreeTable)
+
+
+import VueQuillEditor from 'vue-quill-editor'
+// require styles 导入富文本编辑器对应的样式
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+Vue.use(VueQuillEditor)
 
 Vue.config.productionTip = false
 
