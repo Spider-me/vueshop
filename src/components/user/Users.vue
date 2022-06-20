@@ -2,7 +2,7 @@
 	<div>
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-			<el-breadcrumb-item><a href="/">用户管理</a></el-breadcrumb-item>
+			<el-breadcrumb-item>用户管理</el-breadcrumb-item>
 			<el-breadcrumb-item>用户列表</el-breadcrumb-item>
 		</el-breadcrumb>
 		<el-card class="box-card">
@@ -145,7 +145,7 @@
 				queryInfo: {
 					query: "",
 					pagenum: 1,
-					pagesize: 2
+					pagesize: 10
 				},
 				usersList: [],
 				total: 0,
@@ -315,7 +315,6 @@
 					cancelButtonText: '取消',
 					type: 'warning'
 				}).catch(error => error)
-				console.log(confirmResult);
 				if (confirmResult == "confirm") {
 					const {
 						data: res

@@ -2,7 +2,7 @@
 	<div>
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-			<el-breadcrumb-item><a href="/">权限管理</a></el-breadcrumb-item>
+			<el-breadcrumb-item>权限管理</el-breadcrumb-item>
 			<el-breadcrumb-item>权限列表</el-breadcrumb-item>
 		</el-breadcrumb>
 
@@ -40,8 +40,6 @@
 					return this.$message.error('获取权限列表失败!');
 				} else {
 					this.rigthsList = res.data
-					console.log(res.data);
-					return this.$message.success('获取权限列表成功!');
 				}
 			}
 		},

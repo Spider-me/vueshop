@@ -2,7 +2,7 @@
 	<div>
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-			<el-breadcrumb-item><a href="/">商品管理</a></el-breadcrumb-item>
+			<el-breadcrumb-item>商品管理</el-breadcrumb-item>
 			<el-breadcrumb-item>商品列表</el-breadcrumb-item>
 		</el-breadcrumb>
 		<el-card>
@@ -88,7 +88,6 @@
 					cancelButtonText: '取消',
 					type: 'warning'
 				}).catch(error => error)
-				console.log(confirmResult);
 				if (confirmResult == "confirm") {
 					const {
 						data: res

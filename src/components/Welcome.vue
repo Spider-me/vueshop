@@ -1,5 +1,5 @@
 <template>
-	<div>hello world</div>
+	<div style="text-align: center;margin-top: 22%;">欢迎访问</div>
 </template>
 
 <script>

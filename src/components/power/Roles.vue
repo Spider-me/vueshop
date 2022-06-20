@@ -93,8 +93,6 @@
 					return this.$message.error('获取角色列表失败!');
 				} else {
 					this.rolesList = res.data
-					console.log(res.data);
-					return this.$message.success('获取角色列表成功!');
 				}
 			},
 			async removeRightById(role, rightId) {

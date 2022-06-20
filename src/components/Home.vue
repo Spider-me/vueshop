@@ -7,7 +7,7 @@
 			</div>
 			<el-button type="info" @click="logout">退出</el-button>
 		</el-header>
-		<el-container>
+		<el-container style="height: calc(100% - 60px);">
 			<el-aside :width="isCollapse?'64px':'200px'">
 				<div class="toggle-button" @click="toggleCollapse">
 					|||

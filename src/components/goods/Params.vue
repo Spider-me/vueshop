@@ -2,7 +2,7 @@
 	<div>
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-			<el-breadcrumb-item><a href="/">商品管理</a></el-breadcrumb-item>
+			<el-breadcrumb-item>商品管理</el-breadcrumb-item>
 			<el-breadcrumb-item>分类参数</el-breadcrumb-item>
 		</el-breadcrumb>
 		<el-card>
@@ -158,7 +158,6 @@
 				if (res.meta.status != 200) {
 					return this.$message.error("获取商品分类失败")
 				}
-				console.log(res.data)
 				this.CateList = res.data;
 			},
 			Catelistchange() {
@@ -174,7 +173,6 @@
 					this.onlytableData = [];
 					return;
 				}
-				//console.log(this.selectedcatekey)
 				const {
 					data: res
 				} = await this.$http.get(`categories/${this.cateId}/attributes`, {

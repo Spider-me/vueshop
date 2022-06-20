@@ -2,7 +2,7 @@
 	<div>
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-			<el-breadcrumb-item><a href="/">商品管理</a></el-breadcrumb-item>
+			<el-breadcrumb-item>商品管理</el-breadcrumb-item>
 			<el-breadcrumb-item>商品分类</el-breadcrumb-item>
 		</el-breadcrumb>
 		<el-card>
@@ -141,11 +141,9 @@
 				if (res.meta.status != 200) {
 					return this.$message.error("获取列表失败")
 				}
-				//console.log(res.data);
 				this.parentCateList = res.data;
 			},
 			ParentCatechange() {
-				//console.log(this.selecteKeys)
 				if (this.selecteKeys.length > 0) {
 					this.addCateForm.cat_pid = this.selecteKeys[this.selecteKeys.length - 1]
 					this.addCateForm.cat_level = this.selecteKeys.length;

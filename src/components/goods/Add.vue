@@ -2,7 +2,8 @@
 	<div>
 		<el-breadcrumb separator="/">
 			<el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
-			<el-breadcrumb-item><a href="/">商品管理</a></el-breadcrumb-item>
+			<el-breadcrumb-item>商品管理</el-breadcrumb-item>
+			<el-breadcrumb-item :to="{ path: '/goods' }">商品列表</el-breadcrumb-item>
 			<el-breadcrumb-item>添加商品</el-breadcrumb-item>
 		</el-breadcrumb>
 		<el-card>
@@ -222,7 +223,6 @@
 					this.addForm.attrs.push(newinfo)
 				})
 				from.attrs = this.addForm.attrs;
-				console.log(from)
 				const {
 					data: res
 				} = await this.$http.post('goods', from);
