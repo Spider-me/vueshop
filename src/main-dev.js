@@ -88,10 +88,17 @@ Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
 
 
+import Nprogress from "nprogress"
+import "nprogress/nprogress.css"
 import axios from 'axios'
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
 axios.interceptors.request.use(config => {
+	Nprogress.start()
 	config.headers.Authorization = window.sessionStorage.getItem('token');
+	return config
+})
+axios.interceptors.response.use(config => {
+	Nprogress.done()
 	return config
 })
 Vue.prototype.$http = axios;
