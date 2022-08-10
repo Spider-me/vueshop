@@ -81,6 +81,7 @@ const router = new VueRouter({
 
 //挂载路由守卫
 router.beforeEach((to, from, next) => {
+	console.log(to)
 	if (to.path === '/login') return next();
 	const tokenstr = sessionStorage.getItem("token");
 	if (!tokenstr) return next('/login')
